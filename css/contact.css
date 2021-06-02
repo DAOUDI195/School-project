@@ -1,0 +1,267 @@
+*{
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --secondary-color : white;
+  --contrast-color: #F0C711;
+}
+.first-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  z-index: -10;
+  background-color: var(--contrast-color);
+}
+.container {
+  display: flex;
+  height: 100vh;
+  justify-content: space-around;
+  align-items: center;
+  color: #fff;
+  animation: expand .8s ease forwards;
+  background-color: var(--secondary-color);
+  position: relative;
+  transition: all .8s ease;
+}
+.container_content {
+  width: 30%;
+  position: relative;
+  left: 100px;
+}
+@keyframes slideIn {
+  0% {
+    transform: translateX(500px) scale(.2);
+  }
+  100% {
+    transform: translateX(0px) scale(1);
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(300px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes expand {
+  0% {
+    transform: translateX(1400px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+
+/* logo */
+.container header .logo{
+  width:90px;
+  height: 120px;
+  position: absolute;
+  top: 0;
+  left: 35px;
+}
+/* menu */
+.container header ul{
+  position: absolute;
+  top:40px;
+  left: 63%; 
+
+}
+
+li {
+  display: inline-block;
+  position: relative;
+  top: 0;
+  color: #000;
+  margin: 0 20px;
+}
+li a{
+  text-decoration: none;
+  color: #000;
+  text-transform: capitalize;
+}
+
+.content__item::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.link {
+  cursor: pointer;
+  font-size: 18px;
+  position: relative;
+}
+
+.link::before,
+.link::after {
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background: currentColor;
+  top: 100%;
+  left: 0;
+}
+
+.link::before {
+  content: '';
+}
+
+.link--metis::before {
+  transform-origin: 100% 50%;
+  transform: scale3d(0, 1, 1);
+  transition: transform 0.3s;
+}
+
+.link--metis:hover::before {
+  transform-origin: 0% 50%;
+  transform: scale3d(1, 1, 1);
+}
+
+iframe{
+  width: 100%;
+}
+
+.container_content{
+  left: 0px;
+  bottom: 10px;
+  top: 100px;
+}
+
+h2{
+  width: 100%;
+  height: 40vh;
+  color: #000;
+  text-align: justify;
+  font-size: 30px;
+  line-height: 40px;
+  transform: translateY(300px);
+  animation: slideUp .8s ease-in-out forwards .8s;
+  position: relative;
+  right: 100px;
+  top: -20px;
+
+}
+.title h1 {
+  font-size: 60px;
+  color: var(--contrast-color);
+  position: relative;
+  top: -60px;
+  right: 80px;
+  transform: translateY(100px);
+  animation: slideUp .8s ease forwards .5s;
+}
+
+@keyframes slideUp {
+0% {
+  transform: translateY(300px);
+}
+100% {
+  transform: translateY(0px);
+}
+}
+
+button{
+  cursor: pointer;
+}
+
+.container1{
+  width: 25%;
+  height: 75vh;
+  text-align: center;
+  line-height: 30px;
+  position: relative;
+  top: 30px;
+  right: 10%;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.2);
+  background-color: rgba(255, 255, 255, 0.671);
+}
+.container1 p{
+  color: #fff;
+  font-size:14px;
+  line-height: 20px;
+}
+
+label{
+  color: rgb(0, 0, 0);
+  float: left;
+  padding-top: 2px;
+  padding-left: 20px;
+  font-weight: bold;
+}
+input{
+  width: 89%;
+  height: 35px;
+  border-radius: 25px;
+  border: 1px solid #888;
+}
+.submit
+{
+  width: 90%;
+  height: 30px;
+  font-size: 15px;
+  background-color: #F0C711;
+  border: transparent;
+  border-radius: 25px;
+  position: relative;
+  top: 20px;
+  font-weight: bold;
+  border: 1px solid #888;
+}
+textarea{
+  position: relative;
+  top: 5px;
+  width: 89%;
+  height: 100px;
+  border-radius: 25px;
+}
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: none;
+}
+footer{
+  height: 70px;
+}
+.sm{
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  text-align: center;
+  
+}
+.btn{
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background:transparent;
+  margin: 0px;
+  border-radius: 30%;
+  box-shadow: 0 5px 15px -5px #fff;
+  color: #050505;
+  overflow: hidden;
+  position: relative;
+}
+.btn i{
+  line-height: 50px;
+  font-size: 30px;
+  transition: 0.2s linear;
+}
+.btn:hover i{
+  transform: scale(1.3);
+  color: #f1da0a;
+}
